@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+require('mix-tailwindcss');
 
 // Disable mix-manifest.json
 Mix.manifest.refresh = _ => void 0
@@ -25,7 +26,7 @@ mix.options({
  |
  */
 
-mix.js('src/js/app.js', 'dist/js').sass('src/scss/style.scss', 'dist/css');
+mix.js('src/js/app.js', 'dist/js').sass('src/scss/style.scss', 'dist/css').tailwind();
 
 // Full API
 // mix.js(src, output);
